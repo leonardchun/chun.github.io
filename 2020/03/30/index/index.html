@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>Java工程师成神之路 | 下一秒ッ待续</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Java工程师成神之路">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java工程师成神之路">
+<meta property="og:url" content="http://yoursite.com/2020/03/30/index/index.html">
+<meta property="og:site_name" content="下一秒ッ待续">
+<meta property="og:description" content="Java工程师成神之路">
+<meta property="og:updated_time" content="2018-09-06T11:32:56.541Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java工程师成神之路">
+<meta name="twitter:description" content="Java工程师成神之路">
+  
+    <link rel="alternative" href="/atom.xml" title="下一秒ッ待续" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/touxiang.jpg">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/touxiang.jpg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">下一秒ッ待续</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">没有努力，就没有进步！</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/玩转框架/">玩转框架</a></li>
+                        
+                            <li><a  href="/categories/研发工具/">研发工具</a></li>
+                        
+                            <li><a  href="/categories/玩转框架/大数据/">大数据</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/leonardchun" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="https://blog.csdn.net/qq_15716101" title="weibo">weibo</a>
+                            
+                                <a class="fl mail"  target="_blank" href="mailto:chuncumt@163.com" title="mail">mail</a>
+                            
+                                <a class="fl zhihu"  target="_blank" href="https://blog.csdn.net/qq_15716101" title="zhihu">zhihu</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/protocol/" style="font-size: 10px;">protocol</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.csdn.net/qq_15716101">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.csdn.net/qq_15716101">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.csdn.net/qq_15716101">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">下一秒ッ待续</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/touxiang.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">下一秒ッ待续</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">没有努力，就没有进步！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/玩转框架/">玩转框架</a></li>
+                
+                    <li><a href="/categories/研发工具/">研发工具</a></li>
+                
+                    <li><a href="/categories/玩转框架/大数据/">大数据</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/leonardchun" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="https://blog.csdn.net/qq_15716101" title="weibo">weibo</a>
+                    
+                        <a class="mail" target="_blank" href="mailto:chuncumt@163.com" title="mail">mail</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://blog.csdn.net/qq_15716101" title="zhihu">zhihu</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-index" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/03/30/index/" class="article-date">
+      <time datetime="2020-03-30T03:14:00.000Z" itemprop="datePublished">2020-03-30</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java工程师成神之路
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+    </div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Java工程师成神之路<br><a id="more"></a></p>
+<The rest of contents | 余下全文>
+
+<h3 id="一、基础篇"><a href="#一、基础篇" class="headerlink" title="一、基础篇"></a><strong>一、基础篇</strong></h3><h4 id="1-1、Java基础"><a href="#1-1、Java基础" class="headerlink" title="1.1、Java基础"></a>1.1、Java基础</h4><ul>
+<li>面向对象的特征：继承、封装和多态</li>
+<li>final, finally, finalize 的区别</li>
+<li>Exception、Error、运行时异常与一般异常有何异同</li>
+<li>请写出5种常见到的runtime exception</li>
+<li>int 和 Integer 有什么区别，Integer的值缓存范围</li>
+<li>包装类，装箱和拆箱</li>
+<li>String、StringBuilder、StringBuffer</li>
+<li>重载和重写的区别</li>
+<li>抽象类和接口有什么区别</li>
+<li>说说反射的用途及实现</li>
+<li>说说自定义注解的场景及实现</li>
+<li>HTTP请求的GET与POST方式的区别</li>
+<li>Session与Cookie区别</li>
+<li>列出自己常用的JDK包</li>
+<li>MVC设计思想</li>
+<li>equals与==的区别</li>
+<li>hashCode和equals方法的区别与联系</li>
+<li>什么是Java序列化和反序列化，如何实现Java序列化？或者请解释Serializable 接口的作用</li>
+<li>Object类中常见的方法，为什么wait  notify会放在Object里边？</li>
+<li>Java的平台无关性如何体现出来的</li>
+<li>JDK和JRE的区别</li>
+<li>Java 8有哪些新特性<h4 id="1-2、Java常见集合"><a href="#1-2、Java常见集合" class="headerlink" title="1.2、Java常见集合"></a>1.2、Java常见集合</h4></li>
+<li>List 和 Set 区别</li>
+<li>Set和hashCode以及equals方法的联系</li>
+<li>List 和 Map 区别</li>
+<li>Arraylist 与 LinkedList 区别</li>
+<li>ArrayList 与 Vector 区别</li>
+<li>HashMap 和 Hashtable 的区别</li>
+<li>HashSet 和 HashMap 区别</li>
+<li>HashMap 和 ConcurrentHashMap 的区别</li>
+<li>HashMap 的工作原理及代码实现，什么时候用到红黑树</li>
+<li>多线程情况下HashMap死循环的问题</li>
+<li>HashMap出现Hash DOS攻击的问题</li>
+<li>ConcurrentHashMap 的工作原理及代码实现，如何统计所有的元素个数</li>
+<li>手写简单的HashMap</li>
+<li>看过那些Java集合类的源码<h4 id="1-3、进程和线程"><a href="#1-3、进程和线程" class="headerlink" title="1.3、进程和线程"></a>1.3、进程和线程</h4></li>
+<li>线程和进程的概念、并行和并发的概念</li>
+<li>创建线程的方式及实现</li>
+<li>进程间通信的方式</li>
+<li>说说 CountDownLatch、CyclicBarrier 原理和区别</li>
+<li>说说 Semaphore 原理</li>
+<li>说说 Exchanger 原理</li>
+<li>ThreadLocal 原理分析，ThreadLocal为什么会出现OOM，出现的深层次原理</li>
+<li>讲讲线程池的实现原理</li>
+<li>线程池的几种实现方式</li>
+<li>线程的生命周期，状态是如何转移的<br>可参考：《Java多线程编程核心技术》<h4 id="1-4、锁机制"><a href="#1-4、锁机制" class="headerlink" title="1.4、锁机制"></a>1.4、锁机制</h4></li>
+<li>说说线程安全问题，什么是线程安全，如何保证线程安全</li>
+<li>重入锁的概念，重入锁为什么可以防止死锁</li>
+<li>产生死锁的四个条件（互斥、请求与保持、不剥夺、循环等待）</li>
+<li>如何检查死锁（通过jConsole检查死锁）</li>
+<li>volatile 实现原理（禁止指令重排、刷新内存）</li>
+<li>synchronized 实现原理（对象监视器）</li>
+<li>synchronized 与 lock 的区别</li>
+<li>AQS同步队列</li>
+<li>CAS无锁的概念、乐观锁和悲观锁</li>
+<li>常见的原子操作类</li>
+<li>什么是ABA问题，出现ABA问题JDK是如何解决的</li>
+<li>乐观锁的业务场景及实现方式</li>
+<li>Java 8并法包下常见的并发类</li>
+<li>偏向锁、轻量级锁、重量级锁、自旋锁的概念<br>可参考：《Java多线程编程核心技术》<h4 id="1-5、JVM"><a href="#1-5、JVM" class="headerlink" title="1.5、JVM"></a>1.5、JVM</h4></li>
+<li>JVM运行时内存区域划分</li>
+<li>内存溢出OOM和堆栈溢出SOE的示例及原因、如何排查与解决</li>
+<li>如何判断对象是否可以回收或存活</li>
+<li>常见的GC回收算法及其含义</li>
+<li>常见的JVM性能监控和故障处理工具类：jps、jstat、jmap、jinfo、jconsole等</li>
+<li>JVM如何设置参数</li>
+<li>JVM性能调优</li>
+<li>类加载器、双亲委派模型、一个类的生命周期、类是如何加载到JVM中的</li>
+<li>类加载的过程：加载、验证、准备、解析、初始化</li>
+<li>强引用、软引用、弱引用、虚引用</li>
+<li>Java内存模型JMM<h4 id="1-6、设计模式"><a href="#1-6、设计模式" class="headerlink" title="1.6、设计模式"></a>1.6、设计模式</h4></li>
+<li>常见的设计模式</li>
+<li>设计模式的的六大原则及其含义</li>
+<li>常见的单例模式以及各种实现方式的优缺点，哪一种最好，手写常见的单利模式</li>
+<li>设计模式在实际场景中的应用</li>
+<li>Spring中用到了哪些设计模式</li>
+<li>MyBatis中用到了哪些设计模式</li>
+<li>你项目中有使用哪些设计模式</li>
+<li>说说常用开源框架中设计模式使用分析<br> 动态代理很重要！！！<h4 id="1-7、数据结构"><a href="#1-7、数据结构" class="headerlink" title="1.7、数据结构"></a>1.7、数据结构</h4></li>
+<li>树（二叉查找树、平衡二叉树、红黑树、B树、B+树）</li>
+<li>深度有限算法、广度优先算法</li>
+<li>克鲁斯卡尔算法、普林母算法、迪克拉斯算法</li>
+<li>什么是一致性Hash及其原理、Hash环问题</li>
+<li>常见的排序算法和查找算法：快排、折半查找、堆排序等<h4 id="1-8、网络-IO基础"><a href="#1-8、网络-IO基础" class="headerlink" title="1.8、网络/IO基础"></a>1.8、网络/IO基础</h4></li>
+<li>BIO、NIO、AIO的概念</li>
+<li>什么是长连接和短连接</li>
+<li>Http1.0和2.0相比有什么区别，可参考《Http 2.0》</li>
+<li>Https的基本概念</li>
+<li>三次握手和四次挥手、为什么挥手需要四次</li>
+<li>从游览器中输入URL到页面加载的发生了什么？可参考《从输入URL到页面加载发生了什么》<h3 id="二、数据存储和消息队列"><a href="#二、数据存储和消息队列" class="headerlink" title="二、数据存储和消息队列"></a>二、数据存储和消息队列</h3><h4 id="2-1、数据库"><a href="#2-1、数据库" class="headerlink" title="2.1、数据库"></a>2.1、数据库</h4></li>
+<li>MySQL 索引使用的注意事项</li>
+<li>DDL、DML、DCL分别指什么</li>
+<li>explain命令</li>
+<li>left join，right join，inner join</li>
+<li>数据库事物ACID（原子性、一致性、隔离性、持久性）</li>
+<li>事物的隔离级别（读未提交、读以提交、可重复读、可序列化读）</li>
+<li>脏读、幻读、不可重复读</li>
+<li>数据库的几大范式</li>
+<li>数据库常见的命令</li>
+<li>说说分库与分表设计</li>
+<li>分库与分表带来的分布式困境与应对之策（如何解决分布式下的分库分表，全局表？）</li>
+<li>说说 SQL 优化之道</li>
+<li>MySQL遇到的死锁问题、如何排查与解决</li>
+<li>存储引擎的 InnoDB与MyISAM区别，优缺点，使用场景</li>
+<li>索引类别（B+树索引、全文索引、哈希索引）、索引的原理</li>
+<li>什么是自适应哈希索引（AHI）</li>
+<li>为什么要用 B+tree作为MySQL索引的数据结构</li>
+<li>聚集索引与非聚集索引的区别</li>
+<li>遇到过索引失效的情况没，什么时候可能会出现，如何解决</li>
+<li>limit 20000 加载很慢怎么解决</li>
+<li>如何选择合适的分布式主键方案</li>
+<li>选择合适的数据存储方案</li>
+<li>常见的几种分布式ID的设计方案</li>
+<li>常见的数据库优化方案，在你的项目中数据库如何进行优化的<h4 id="2-2、Redis"><a href="#2-2、Redis" class="headerlink" title="2.2、Redis"></a>2.2、Redis</h4></li>
+<li>Redis 有哪些数据类型，可参考《Redis常见的5种不同的数据类型详解》</li>
+<li>Redis 内部结构</li>
+<li>Redis 使用场景</li>
+<li>Redis 持久化机制，可参考《使用快照和AOF将Redis数据持久化到硬盘中》</li>
+<li>Redis 集群方案与实现</li>
+<li>Redis 为什么是单线程的？</li>
+<li>缓存雪崩、缓存穿透、缓存预热、缓存更新、缓存降级</li>
+<li>使用缓存的合理性问题</li>
+<li>Redis常见的回收策略<h4 id="2-3、消息队列"><a href="#2-3、消息队列" class="headerlink" title="2.3、消息队列"></a>2.3、消息队列</h4></li>
+<li>消息队列的使用场景</li>
+<li>消息的重发补偿解决思路</li>
+<li>消息的幂等性解决思路</li>
+<li>消息的堆积解决思路</li>
+<li>自己如何实现消息队列</li>
+<li>如何保证消息的有序性<h3 id="三、开源框架和容器"><a href="#三、开源框架和容器" class="headerlink" title="三、开源框架和容器"></a>三、开源框架和容器</h3><h4 id="3-1、SSM-Servlet"><a href="#3-1、SSM-Servlet" class="headerlink" title="3.1、SSM/Servlet"></a>3.1、SSM/Servlet</h4></li>
+<li>Servlet的生命周期</li>
+<li>转发与重定向的区别</li>
+<li>BeanFactory 和 ApplicationContext 有什么区别</li>
+<li>Spring Bean 的生命周期</li>
+<li>Spring IOC 如何实现</li>
+<li>Spring中Bean的作用域，默认的是哪一个</li>
+<li>说说 Spring AOP、Spring AOP 实现原理</li>
+<li>动态代理（CGLib 与 JDK）、优缺点、性能对比、如何选择</li>
+<li>Spring 事务实现方式、事务的传播机制、默认的事务类别</li>
+<li>Spring 事务底层原理</li>
+<li>Spring事务失效（事务嵌套），JDK动态代理给Spring事务埋下的坑，可参考《JDK动态代理给Spring事务埋下的坑！》</li>
+<li>如何自定义注解实现功能</li>
+<li>Spring MVC 运行流程</li>
+<li>Spring MVC 启动流程</li>
+<li>Spring 的单例实现原理</li>
+<li>Spring 框架中用到了哪些设计模式</li>
+<li>Spring 其他产品（Srping Boot、Spring Cloud、Spring Secuirity、Spring Data、Spring AMQP 等）</li>
+<li>有没有用到Spring Boot，Spring Boot的认识、原理</li>
+<li>MyBatis的原理<br>  可参考《为什么会有Spring》<br>  可参考《为什么会有Spring AOP》<h4 id="3-2、Netty"><a href="#3-2、Netty" class="headerlink" title="3.2、Netty"></a>3.2、Netty</h4></li>
+<li>为什么选择 Netty</li>
+<li>说说业务中，Netty 的使用场景</li>
+<li>原生的 NIO 在 JDK 1.7 版本存在 epoll bug</li>
+<li>什么是TCP 粘包/拆包</li>
+<li>TCP粘包/拆包的解决办法</li>
+<li>Netty 线程模型</li>
+<li>说说 Netty 的零拷贝</li>
+<li>Netty 内部执行流程</li>
+<li>Netty 重连实现<h4 id="3-3、Tomcat"><a href="#3-3、Tomcat" class="headerlink" title="3.3、Tomcat"></a>3.3、Tomcat</h4></li>
+<li>Tomcat的基础架构（Server、Service、Connector、Container）</li>
+<li>Tomcat如何加载Servlet的</li>
+<li>Pipeline-Valve机制<br>  可参考：《四张图带你了解Tomcat系统架构！》<h3 id="四、分布式"><a href="#四、分布式" class="headerlink" title="四、分布式"></a>四、分布式</h3><h4 id="4-1、Nginx"><a href="#4-1、Nginx" class="headerlink" title="4.1、Nginx"></a>4.1、Nginx</h4></li>
+<li>请解释什么是C10K问题或者知道什么是C10K问题吗？</li>
+<li>Nginx简介，可参考《Nginx简介》</li>
+<li>正向代理和反向代理.</li>
+<li>Nginx几种常见的负载均衡策略</li>
+<li>Nginx服务器上的Master和Worker进程分别是什么</li>
+<li>使用“反向代理服务器”的优点是什么?<h4 id="4-2、分布式其他"><a href="#4-2、分布式其他" class="headerlink" title="4.2、分布式其他"></a>4.2、分布式其他</h4></li>
+<li>谈谈业务中使用分布式的场景</li>
+<li>Session 分布式方案</li>
+<li>Session 分布式处理</li>
+<li>分布式锁的应用场景、分布式锁的产生原因、基本概念</li>
+<li>分布是锁的常见解决方案</li>
+<li>分布式事务的常见解决方案</li>
+<li>集群与负载均衡的算法与实现</li>
+<li>说说分库与分表设计，可参考《数据库分库分表策略的具体实现方案》</li>
+<li>分库与分表带来的分布式困境与应对之策<h4 id="4-3、Dubbo"><a href="#4-3、Dubbo" class="headerlink" title="4.3、Dubbo"></a>4.3、Dubbo</h4></li>
+<li>什么是Dubbo，可参考《Dubbo入门》</li>
+<li>什么是RPC、如何实现RPC、RPC 的实现原理，可参考《基于HTTP的RPC实现》</li>
+<li>Dubbo中的SPI是什么概念</li>
+<li>Dubbo的基本原理、执行流程<h3 id="五、微服务"><a href="#五、微服务" class="headerlink" title="五、微服务"></a>五、微服务</h3><h4 id="5-1、微服务"><a href="#5-1、微服务" class="headerlink" title="5.1、微服务"></a>5.1、微服务</h4></li>
+<li>前后端分离是如何做的？</li>
+<li>微服务哪些框架</li>
+<li>Spring Could的常见组件有哪些？可参考《Spring Cloud概述》</li>
+<li>领域驱动有了解吗？什么是领域驱动模型？充血模型、贫血模型</li>
+<li>JWT有了解吗，什么是JWT，可参考《前后端分离利器之JWT》</li>
+<li>你怎么理解 RESTful</li>
+<li>说说如何设计一个良好的 API</li>
+<li>如何理解 RESTful API 的幂等性</li>
+<li>如何保证接口的幂等性</li>
+<li>说说 CAP 定理、BASE 理论</li>
+<li>怎么考虑数据一致性问题</li>
+<li>说说最终一致性的实现方案</li>
+<li>微服务的优缺点，可参考《微服务批判》</li>
+<li>微服务与 SOA 的区别</li>
+<li>如何拆分服务、水平分割、垂直分割</li>
+<li>如何应对微服务的链式调用异常</li>
+<li>如何快速追踪与定位问题</li>
+<li>如何保证微服务的安全、认证<h4 id="5-2、安全问题"><a href="#5-2、安全问题" class="headerlink" title="5.2、安全问题"></a>5.2、安全问题</h4></li>
+<li>如何防范常见的Web攻击、如何方式SQL注入</li>
+<li>服务端通信安全攻防</li>
+<li>HTTPS原理剖析、降级攻击、HTTP与HTTPS的对比<h4 id="5-3、性能优化"><a href="#5-3、性能优化" class="headerlink" title="5.3、性能优化"></a>5.3、性能优化</h4></li>
+<li>性能指标有哪些</li>
+<li>如何发现性能瓶颈</li>
+<li>性能调优的常见手段</li>
+<li>说说你在项目中如何进行性能调优<h3 id="六、其他"><a href="#六、其他" class="headerlink" title="六、其他"></a>六、其他</h3><h4 id="6-1、设计能力"><a href="#6-1、设计能力" class="headerlink" title="6.1、设计能力"></a>6.1、设计能力</h4></li>
+<li>说说你在项目中使用过的UML图</li>
+<li>你如何考虑组件化、服务化、系统拆分</li>
+<li>秒杀场景如何设计<br>可参考：《秒杀系统的技术挑战、应对策略以及架构设计总结一二！》<h4 id="6-2、业务工程"><a href="#6-2、业务工程" class="headerlink" title="6.2、业务工程"></a>6.2、业务工程</h4></li>
+<li>说说你的开发流程、如何进行自动化部署的</li>
+<li>你和团队是如何沟通的</li>
+<li>你如何进行代码评审</li>
+<li>说说你对技术与业务的理解</li>
+<li>说说你在项目中遇到感觉最难Bug，是如何解决的</li>
+<li>介绍一下工作中的一个你认为最有价值的项目，以及在这个过程中的角色、解决的问题、你觉得你们项目还有哪些不足的地方<h4 id="6-3、软实力"><a href="#6-3、软实力" class="headerlink" title="6.3、软实力"></a>6.3、软实力</h4></li>
+<li>说说你的优缺点、亮点</li>
+<li>说说你最近在看什么书、什么博客、在研究什么新技术、再看那些开源项目的源代码</li>
+<li>说说你觉得最有意义的技术书籍</li>
+<li>工作之余做什么事情、平时是如何学习的，怎样提升自己的能力</li>
+<li>说说个人发展方向方面的思考</li>
+<li>说说你认为的服务端开发工程师应该具备哪些能力</li>
+<li>说说你认为的架构师是什么样的，架构师主要做什么</li>
+<li><p>如何看待加班的问题</p>
+<p>当然，一个完整的面试肯定不止上述的知识点，其他的诸如：Linux、数据结构、算法、逻辑思维题、系统设计题、职业规划等等都会有所涉及</p>
+</li>
+</ul>
+<h3 id="二、进阶篇"><a href="#二、进阶篇" class="headerlink" title="二、进阶篇"></a><strong>二、进阶篇</strong></h3><h3 id="三、高级篇"><a href="#三、高级篇" class="headerlink" title="三、高级篇"></a><strong>三、高级篇</strong></h3><h3 id="四、架构篇"><a href="#四、架构篇" class="headerlink" title="四、架构篇"></a><strong>四、架构篇</strong></h3>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2020/03/30/index/">Java工程师成神之路</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 下一秒ッ待续 的个人博客">下一秒ッ待续</a></p>
+        <p><span>发布时间:</span>2020年03月30日 - 11时14分</p>
+        <p><span>最后更新:</span>2018年09月06日 - 19时32分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/03/30/index/" title="Java工程师成神之路">http://yoursite.com/2020/03/30/index/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/03/30/index/　　作者: 下一秒ッ待续" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a  href="/2019/02/14/DBCP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据库连接池DBCP</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、基础篇"><span class="toc-number">1.</span> <span class="toc-text">一、基础篇</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、Java基础"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、Java基础</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、Java常见集合"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、Java常见集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、进程和线程"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、进程和线程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、锁机制"><span class="toc-number">1.4.</span> <span class="toc-text">1.4、锁机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、JVM"><span class="toc-number">1.5.</span> <span class="toc-text">1.5、JVM</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、设计模式"><span class="toc-number">1.6.</span> <span class="toc-text">1.6、设计模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7、数据结构"><span class="toc-number">1.7.</span> <span class="toc-text">1.7、数据结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-8、网络-IO基础"><span class="toc-number">1.8.</span> <span class="toc-text">1.8、网络/IO基础</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、数据存储和消息队列"><span class="toc-number">2.</span> <span class="toc-text">二、数据存储和消息队列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1、数据库"><span class="toc-number">2.1.</span> <span class="toc-text">2.1、数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2、Redis"><span class="toc-number">2.2.</span> <span class="toc-text">2.2、Redis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3、消息队列"><span class="toc-number">2.3.</span> <span class="toc-text">2.3、消息队列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、开源框架和容器"><span class="toc-number">3.</span> <span class="toc-text">三、开源框架和容器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1、SSM-Servlet"><span class="toc-number">3.1.</span> <span class="toc-text">3.1、SSM/Servlet</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2、Netty"><span class="toc-number">3.2.</span> <span class="toc-text">3.2、Netty</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3、Tomcat"><span class="toc-number">3.3.</span> <span class="toc-text">3.3、Tomcat</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、分布式"><span class="toc-number">4.</span> <span class="toc-text">四、分布式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1、Nginx"><span class="toc-number">4.1.</span> <span class="toc-text">4.1、Nginx</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2、分布式其他"><span class="toc-number">4.2.</span> <span class="toc-text">4.2、分布式其他</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3、Dubbo"><span class="toc-number">4.3.</span> <span class="toc-text">4.3、Dubbo</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、微服务"><span class="toc-number">5.</span> <span class="toc-text">五、微服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1、微服务"><span class="toc-number">5.1.</span> <span class="toc-text">5.1、微服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2、安全问题"><span class="toc-number">5.2.</span> <span class="toc-text">5.2、安全问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3、性能优化"><span class="toc-number">5.3.</span> <span class="toc-text">5.3、性能优化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、其他"><span class="toc-number">6.</span> <span class="toc-text">六、其他</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1、设计能力"><span class="toc-number">6.1.</span> <span class="toc-text">6.1、设计能力</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2、业务工程"><span class="toc-number">6.2.</span> <span class="toc-text">6.2、业务工程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-3、软实力"><span class="toc-number">6.3.</span> <span class="toc-text">6.3、软实力</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、进阶篇"><span class="toc-number">7.</span> <span class="toc-text">二、进阶篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、高级篇"><span class="toc-number">8.</span> <span class="toc-text">三、高级篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、架构篇"><span class="toc-number">9.</span> <span class="toc-text">四、架构篇</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2019/02/14/DBCP/" title="下一篇: 数据库连接池DBCP">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/30/index/">Java工程师成神之路</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/DBCP/">数据库连接池DBCP</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/14/ali-drds-01/">分布式关系型数据库 DRDS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/14/ali-occ-01/">分布式对象存储OSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/14/high_soft_examination/">软考高级架构师</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/14/soft_examination/">软考中级软件设计师</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/ali-service-01/">分布式服务技术</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/30/Centos7上安装docker/">Centos7上安装Docker</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/30/phoenix/">Phoenix操作hbase语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/gitlab-ce/">Gitlab服务器搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/gitlab-ci/">Gitlab-CI安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/hexo-gitlab/">Hexo + Gitlab光速搭建博客并实现Git服务器自动部署</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/spark-streaming-01/">Spark Streaming原理介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/windows/">Windows 命令行</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/zookeeper/">Zookeeper安装部署手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/markdown/">MarkDown</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/dslock/">分布式锁的几种实现方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/26/dsbasic/">分布式系统理论基础</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 下一秒ッ待续
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

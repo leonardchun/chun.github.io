@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>Windows 命令行 | 下一秒ッ待续</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Windows 命令行： 打开”运行”对话框（Win+R），输入cmd，打开控制台命令窗口…也可以通过cmd /c 命令 和 cmd /k 命令的方式来直接运行命令注：/c表示执行完命令后关闭cmd窗口；/k表示执行完命令后保留cmd窗口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows 命令行">
+<meta property="og:url" content="http://yoursite.com/2018/08/29/windows/index.html">
+<meta property="og:site_name" content="下一秒ッ待续">
+<meta property="og:description" content="Windows 命令行： 打开”运行”对话框（Win+R），输入cmd，打开控制台命令窗口…也可以通过cmd /c 命令 和 cmd /k 命令的方式来直接运行命令注：/c表示执行完命令后关闭cmd窗口；/k表示执行完命令后保留cmd窗口">
+<meta property="og:updated_time" content="2018-09-06T10:55:15.643Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Windows 命令行">
+<meta name="twitter:description" content="Windows 命令行： 打开”运行”对话框（Win+R），输入cmd，打开控制台命令窗口…也可以通过cmd /c 命令 和 cmd /k 命令的方式来直接运行命令注：/c表示执行完命令后关闭cmd窗口；/k表示执行完命令后保留cmd窗口">
+  
+    <link rel="alternative" href="/atom.xml" title="下一秒ッ待续" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/touxiang.jpg">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/touxiang.jpg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">下一秒ッ待续</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">没有努力，就没有进步！</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/玩转框架/">玩转框架</a></li>
+                        
+                            <li><a  href="/categories/研发工具/">研发工具</a></li>
+                        
+                            <li><a  href="/categories/玩转框架/大数据/">大数据</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/leonardchun" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="https://blog.csdn.net/qq_15716101" title="weibo">weibo</a>
+                            
+                                <a class="fl mail"  target="_blank" href="mailto:chuncumt@163.com" title="mail">mail</a>
+                            
+                                <a class="fl zhihu"  target="_blank" href="https://blog.csdn.net/qq_15716101" title="zhihu">zhihu</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/protocol/" style="font-size: 10px;">protocol</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.csdn.net/qq_15716101">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.csdn.net/qq_15716101">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.csdn.net/qq_15716101">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">下一秒ッ待续</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/touxiang.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">下一秒ッ待续</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">没有努力，就没有进步！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/玩转框架/">玩转框架</a></li>
+                
+                    <li><a href="/categories/研发工具/">研发工具</a></li>
+                
+                    <li><a href="/categories/玩转框架/大数据/">大数据</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/leonardchun" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="https://blog.csdn.net/qq_15716101" title="weibo">weibo</a>
+                    
+                        <a class="mail" target="_blank" href="mailto:chuncumt@163.com" title="mail">mail</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://blog.csdn.net/qq_15716101" title="zhihu">zhihu</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-windows" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/08/29/windows/" class="article-date">
+      <time datetime="2018-08-29T12:20:00.000Z" itemprop="datePublished">2018-08-29</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Windows 命令行
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/语法手册/">语法手册</a>
+    </div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <hr>
+<p><strong> Windows 命令行：</strong> <Excerpt in index | 首页摘要><br>打开”运行”对话框（Win+R），输入cmd，打开控制台命令窗口…<br>也可以通过cmd /c 命令 和 cmd /k 命令的方式来直接运行命令<br>注：/c表示执行完命令后关闭cmd窗口；/k表示执行完命令后保留cmd窗口<br><a id="more"></a></p>
+<The rest of contents | 余下全文>
+
+<p>windows 命令行d</p>
+<p>dir (directory) ：列出当前目录下的文件以及文件夹<br>md (make directory)： 创建目录<br>rd (remove directory)：删除目录<br>cd (change directory)：进入指定目录<br>cd.. : 退回到上一级目录<br>cd\ : 退回到根目录<br>del：删除文件<br>exit：退出dos命令行<br>cls (clear screen): 清屏</p>
+<p>有关某个命令的详细信息，请键入 HELP 命令名<br>ASSOC 显示或修改文件扩展名关联。<br>ATTRIB 显示或更改文件属性。<br>BREAK 设置或清除扩展式 CTRL+C 检查。<br>BCDEDIT 设置启动数据库中的属性以控制启动加载。<br>CACLS 显示或修改文件的访问控制列表(ACL)。<br>CALL 从另一个批处理程序调用这一个。<br>CD 显示当前目录的名称或将其更改。<br>CHCP 显示或设置活动代码页数。<br>CHDIR 显示当前目录的名称或将其更改。<br>CHKDSK 检查磁盘并显示状态报告。<br>CHKNTFS 显示或修改启动时间磁盘检查。<br>CLS 清除屏幕。<br>CMD 打开另一个 Windows 命令解释程序窗口。<br>COLOR 设置默认控制台前景和背景颜色。<br>COMP 比较两个或两套文件的内容。<br>COMPACT 显示或更改 NTFS 分区上文件的压缩。<br>CONVERT 将 FAT 卷转换成 NTFS。您不能转换<br>当前驱动器。<br>COPY 将至少一个文件复制到另一个位置。<br>DATE 显示或设置日期。<br>DEL 删除至少一个文件。<br>DIR 显示一个目录中的文件和子目录。<br>DISKCOMP 比较两个软盘的内容。<br>DISKCOPY 将一个软盘的内容复制到另一个软盘。<br>DISKPART 显示或配置磁盘分区属性。<br>DOSKEY 编辑命令行、调用 Windows 命令并创建宏。<br>DRIVERQUERY 显示当前设备驱动程序状态和属性。<br>ECHO 显示消息，或将命令回显打开或关上。<br>ENDLOCAL 结束批文件中环境更改的本地化。<br>ERASE 删除一个或多个文件。<br>EXIT 退出 CMD.EXE 程序(命令解释程序)。<br>FC 比较两个文件或两个文件集并显示它们之间的不同。<br>FIND 在一个或多个文件中搜索一个文本字符串。<br>FINDSTR 在多个文件中搜索字符串。<br>FOR 为一套文件中的每个文件运行一个指定的命令。<br>FORMAT 格式化磁盘，以便跟 Windows 使用。<br>FSUTIL 显示或配置文件系统的属性。<br>FTYPE 显示或修改用在文件扩展名关联的文件类型。<br>GOTO 将 Windows 命令解释程序指向批处理程序<br>中某个带标签的行。<br>GPRESULT 显示机器或用户的组策略信息。<br>GRAFTABL 启用 Windows 在图形模式显示扩展字符集。<br>HELP 提供 Windows 命令的帮助信息。<br>ICACLS 显示、修改、备份或还原文件和<br>目录的 ACL。<br>IF 在批处理程序中执行有条件的处理过程。<br>LABEL 创建、更改或删除磁盘的卷标。<br>MD 创建一个目录。<br>MKDIR 创建一个目录。<br>MKLINK 创建符号链接和硬链接<br>MODE 配置系统设备。<br>MORE 逐屏显示输出。<br>MOVE 将一个或多个文件从一个目录移动到另一个目录。<br>OPENFILES 显示远程用户为了文件共享而打开的文件。<br>PATH 为可执行文件显示或设置搜索路径。<br>PAUSE 停止批处理文件的处理并显示信息。<br>POPD 还原由 PUSHD 保存的当前目录上一次的值。<br>PRINT 打印一个文本文件。<br>PROMPT 改变 Windows 命令提示。<br>PUSHD 保存当前目录，然后对其进行更改。<br>RD 删除目录。<br>RECOVER 从损坏的磁盘中恢复可读取的信息。<br>REM 记录批处理文件或 CONFIG.SYS 中的注释。<br>REN 重新命名文件。<br>RENAME 重新命名文件。<br>REPLACE 替换文件。<br>RMDIR 删除目录。<br>ROBOCOPY 复制文件和目录树的高级实用程序<br>SET 显示、设置或删除 Windows 环境变量。<br>SETLOCAL 开始用批文件改变环境的本地化。<br>SC 显示或配置服务(后台处理)。<br>SCHTASKS 安排命令和程序在一部计算机上按计划运行。<br>SHIFT 调整批处理文件中可替换参数的位置。<br>SHUTDOWN 让机器在本地或远程正确关闭。<br>SORT 将输入排序。<br>START 打开单独视窗运行指定程序或命令。<br>SUBST 将驱动器号与路径关联。<br>SYSTEMINFO 显示机器的具体的属性和配置。<br>TASKLIST 显示包括服务的所有当前运行的任务。<br>TASKKILL 终止正在运行的进程或应用程序。<br>TIME 显示或设置系统时间。<br>TITLE 设置 CMD.EXE 会话的窗口标题。<br>TREE 以图形显示启动器或路径的目录结构。<br>TYPE 显示文本文件的内容。<br>VER 显示 Windows 的版本。<br>VERIFY 告诉 Windows 验证文件是否正确写入磁盘。<br>VOL 显示磁盘卷标和序列号。<br>XCOPY 复制文件和目录树。<br>WMIC 在交互命令外壳里显示 WMI 信息。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2018/08/29/windows/">Windows 命令行</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 下一秒ッ待续 的个人博客">下一秒ッ待续</a></p>
+        <p><span>发布时间:</span>2018年08月29日 - 20时20分</p>
+        <p><span>最后更新:</span>2018年09月06日 - 18时55分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/29/windows/" title="Windows 命令行">http://yoursite.com/2018/08/29/windows/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/29/windows/　　作者: 下一秒ッ待续" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a  href="/2018/08/29/spark-streaming-01/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Spark Streaming原理介绍
+        
+      </div>
+    </a>
+  
+  
+    <a  href="/2018/08/29/zookeeper/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Zookeeper安装部署手册</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/2018/08/29/spark-streaming-01/" title="上一篇: Spark Streaming原理介绍">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2018/08/29/zookeeper/" title="下一篇: Zookeeper安装部署手册">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/30/index/">Java工程师成神之路</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/DBCP/">数据库连接池DBCP</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/14/ali-drds-01/">分布式关系型数据库 DRDS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/14/ali-occ-01/">分布式对象存储OSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/14/high_soft_examination/">软考高级架构师</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/14/soft_examination/">软考中级软件设计师</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/ali-service-01/">分布式服务技术</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/30/Centos7上安装docker/">Centos7上安装Docker</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/30/phoenix/">Phoenix操作hbase语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/gitlab-ce/">Gitlab服务器搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/gitlab-ci/">Gitlab-CI安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/hexo-gitlab/">Hexo + Gitlab光速搭建博客并实现Git服务器自动部署</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/spark-streaming-01/">Spark Streaming原理介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/windows/">Windows 命令行</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/zookeeper/">Zookeeper安装部署手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/markdown/">MarkDown</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/dslock/">分布式锁的几种实现方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/26/dsbasic/">分布式系统理论基础</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 下一秒ッ待续
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
